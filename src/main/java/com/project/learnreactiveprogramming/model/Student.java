@@ -82,4 +82,16 @@ public class Student {
     public void setBranch(String branch) {
         this.branch = branch;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", enrollmentId='" + enrollmentId + '\'' +
+                ", address=" + address +
+                ", name='" + name + '\'' +
+                ", dob='" + dob + '\'' +
+                ", branch='" + branch + '\'' +
+                '}';
+    }
 }

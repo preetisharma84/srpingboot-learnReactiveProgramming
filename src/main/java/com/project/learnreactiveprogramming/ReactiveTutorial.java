@@ -68,7 +68,7 @@ public class ReactiveTutorial {
         return Flux.merge(flux1, flux2);
     }
 
-
+    //zip() is used to combine 2 or more data into 1 stream
     private Flux<Tuple3<Integer, Integer, Integer>> testZipFlux() {
         Flux<Integer> flux1 = Flux.range(1, 10);
         Flux<Integer> flux2 = Flux.range(101, 20);
@@ -92,7 +92,7 @@ public class ReactiveTutorial {
         return flux1.buffer(Duration.ofMillis(3_100));
     }
 
-
+    //collectMap converts reactive data into map collection
     private Mono<Map<Integer, Integer>> testMapCollection() {
         //map (key, value) = (n, n*n)
         //(2, 4), (3, 9), (4, 16), (5, 25)
